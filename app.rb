@@ -9,14 +9,14 @@ class App
     body = response_body(formatter)
     status = formatter.valid? ? 200 : 400
 
-    [status, { }, [body]]
+    [status, {}, [body]]
   end
 
   private
 
   def response_body(formatter)
     if formatter.valid?
-      formatter.time + "\n"
+      "#{formatter.time}\n"
     else
       "Unknown time format [#{formatter.invalid_formats.join(', ')}]\n"
     end

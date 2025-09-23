@@ -19,6 +19,7 @@ class TimeFormatter
 
   def invalid_formats
     return [''] if @format_param.nil? || @format_param.strip.empty?
+
     formats - VALID_FORMATS
   end
 
